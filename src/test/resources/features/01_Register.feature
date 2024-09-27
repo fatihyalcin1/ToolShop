@@ -1,7 +1,7 @@
 Feature: Register
 
 
-  @register
+  @register @smoke
   Scenario: Register
     Given User is on the home page
     When User clicks Sign in button

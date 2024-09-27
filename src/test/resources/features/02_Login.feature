@@ -1,7 +1,7 @@
 Feature: Login
 
 
-  @login
+  @login @smoke
   Scenario: Login
     Given User is on the home page
     When User clicks Sign in button

@@ -1,17 +1,11 @@
-package steps;
+package stepDefinitions;
 
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.LoginPage;
 import pages.RegisterPage;
 import utilities.BrowserUtils;
-import utilities.Driver;
 
-import java.util.NoSuchElementException;
-
-public class RegisterStepDefs {
+public class RegisterStepDefinitions {
 
     LoginPage loginPage= new LoginPage();
     RegisterPage registerPage = new RegisterPage();
