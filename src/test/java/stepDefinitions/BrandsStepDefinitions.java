@@ -10,7 +10,6 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
 import pages.BasePage;
 import utilities.BrowserUtils;
 import utilities.ConfigurationReader;
@@ -28,7 +27,7 @@ public class BrandsStepDefinitions {
     @Given("the API is up and running")
     public void the_api_is_up_and_running() {
         response = given().get(url);
-        Assertions.assertEquals(200, response.getStatusCode(), "API is not up and running");
+        Assert.assertEquals(200, response.getStatusCode());
 
     }
 
@@ -67,7 +66,7 @@ public class BrandsStepDefinitions {
     @Then("the response should contain the brand's name and slug")
     public void the_response_should_contain_the_brands_name_and_slug() {
         response.then().body("name", is(name)).body("slug", is(slug));
-        Assertions.assertEquals(name, response.path("name"));
+        Assert.assertEquals(name, response.path("name"));
 
     }
 
@@ -83,7 +82,7 @@ public class BrandsStepDefinitions {
                 .statusCode(200)
                 .extract().response();
 
-        Assertions.assertEquals(200, response.getStatusCode());
+        Assert.assertEquals(200, response.getStatusCode());
     }
 
     @When("I send a PUT request to the brands endpoint with updated brand data")
@@ -150,7 +149,7 @@ public class BrandsStepDefinitions {
         BrowserUtils.waitFor(3);
         System.out.println("basePage.newBrand(expectedBrandPutNameApi).getText() = " + basePage.newBrand(expectedBrandPutNameApi).getText());
         // Assert that the name of the brand displayed on the UI matches the name of the brand created and updated via the API
-        Assertions.assertEquals(expectedBrandPutNameApi, actualBrandPutNameUi);
+        Assert.assertEquals(expectedBrandPutNameApi, actualBrandPutNameUi);
 
 
     }
