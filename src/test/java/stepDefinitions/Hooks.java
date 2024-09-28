@@ -1,4 +1,4 @@
-package steps;
+package stepDefinitions;
 
 import utilities.BrowserUtils;
 import utilities.Driver;

@@ -1,4 +1,4 @@
-package steps;
+package stepDefinitions;
 
 
 import io.cucumber.java.en.Given;
@@ -17,7 +17,7 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class LoginStepDefs {
+public class LoginStepDefinitions {
     BasePage basePage = new BasePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
@@ -28,24 +28,13 @@ public class LoginStepDefs {
     @When("User clicks Sign in button")
     public void user_clicks_sign_in_button() {
 
-
-        basePage.home.click();
-        BrowserUtils.waitFor(3);
-        basePage.categories.click();
-        BrowserUtils.waitFor(3);
-        basePage.contact.click();
-        BrowserUtils.waitFor(3);
-        basePage.language.click();
-        BrowserUtils.waitFor(3);
         basePage.signIn.click();
 
-
-        List<WebElement> allCategoriesItems = Driver.getDriver().findElements(By.xpath("//ul[@class='dropdown-menu show']"));
+        /*List<WebElement> allCategoriesItems = Driver.getDriver().findElements(By.xpath("//ul[@class='dropdown-menu show']"));
 
         for (WebElement item : allCategoriesItems) {
             System.out.println(item.getText());
-        }
-
+        }*/
     }
 
     @Then("User should see page title starts as Login")

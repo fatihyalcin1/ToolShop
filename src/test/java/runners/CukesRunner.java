@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json"
         },
         features = "src/test/resources/features",
-        glue = "steps",
+        glue = "stepDefinitions",
         dryRun = false,
         tags = "",
         publish = true //generating a report with public link
