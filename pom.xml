@@ -33,8 +33,6 @@
             <artifactId>selenium-java</artifactId>
             <version>4.20.0</version>
         </dependency>
-
-
         <dependency>
             <groupId>me.jvt.cucumber</groupId>
             <artifactId>reporting-plugin</artifactId>
